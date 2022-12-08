@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	@font-face {
+    font-family: 'Edensor-Free'; /*font 이름*/
+    font-style: 'normal'; /* font 스타일 정의 (기울임, 일반) */
+    font-weight: 400; /* font 굵기 정의 */
+    /* 브라우저&디바이스 환경에 따른 font 파일 위치 정의 */
+    src: url('Edensor-Free.woff') format(woff);
+    } 
+/*fonts.css*/
+#myVideo1 {            
+    position: relative; 
+    min-width: 100%; 
+    height: 100%;
+    
+}
+
+    .v22
+    {
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 22px;
+    }
+
+
+
+
+body
+ {  
+ 	width: 100vw; 
+    height: 100vh;
+    background-color: black;
+    object-fit: scale-down;
+    font-family: 'Edensor-Free';
+    opacity: 1;
+    transition-duration: 5s;
+    transition-property: opacity;
+    }
+
+    body.fade {
+
+      opacity: 0;
+    }
+
+.font{
+	font-family: 'Edensor-Free';
+}
+
+.pj_list_box {  /* 글자들 div 상자 */
+
+	position: 	absolute			;
+	top : 20%;
+	height: 400px;
+	width: 70%;
+    font-family: 'Edensor-Free';
+}
+
+.button{
+	font-family: 'Edensor-Free';
+	color: blueviolet;  
+	height: 100%; 
+	width : 100%;
+	background: red;
+}
+
+.btn1{
+	font-family: 'Edensor-Free';
+	color: white;  
+	height: 100%; 
+	width : 100%;
+	font-size: 80px;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+
+.btn2{
+	font-family: 'Edensor-Free';
+	color: white;  
+	height: 100%; 
+	width : 100%;
+	font-size: 80px;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+.btn3{
+	font-family: 'Edensor-Free';
+	color: white;  
+	height: 100%; 
+	width : 100%;
+	font-size: 80px;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+.btn4{
+	font-family: 'Edensor-Free';
+	color: white;  
+	height: 100%; 
+	width : 100%;
+	font-size: 80px;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+.btn5{
+	font-family: 'Edensor-Free';
+	color: white;  
+	height: 100%; 
+	width : 100%;
+	font-size: 80px;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+
+.fade_box_1 { / * 1번째 항목 페이드 인 * /
+  background: black;
+  color: white;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  padding: 1px 2px;
+  text-align: right	;
+  visibility: visible;
+  position: absolute;
+  top: 10%;
+  left: 33%;
+  font-size: 70px;
+}
+
+.fade_box_2 { / * 2번째 항목 페이드 인 * /
+  background: black;
+  color: white;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  padding: 1px 2px;
+  text-align: right	;
+  visibility: visible;
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  font-size: 70px;
+}
+.fade_box_3 {  / * 3번째 항목 페이드 인 * /
+  background: black;
+  color: white;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  padding: 1px 2px;
+  text-align: right	;
+  visibility: visible;
+  position: absolute;
+  top: 70%;
+  left: 33%;
+  font-size: 70px;
+}
+.fade_box_4 { / * 4번째 항목 페이드 인 * /
+  background: black;
+  color: white;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  padding: 1px 2px;
+  text-align: right	;
+  visibility: visible;
+  position: absolute;
+  top: 100%;
+  left: 43%;
+  font-size: 70px;
+}
+.fade_box_5 { / * 5번째 항목 페이드 인 * /
+  background: black;
+  color: white;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  padding: 1px 2px;
+  text-align: right	;
+  visibility: visible;
+  position: absolute;
+  top: 140%;
+  left: 33%;
+  font-size: 70px;
+}
+
+
+
+.hidden_box{
+visibility: hidden;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+
+
+</style>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+
+<body>
+    <video id="myVideo" class="v22"     autoplay muted>      
+        <source id="list" type="video/mp4" src="laptop_1_1080.mp4" type="video/mp4" onended="nextPlay()" />
+    </video>
+    <video id="Video2" class="v22" autoplay muted>      
+        <source id="v2" type="video/mp4" src="" type="video/mp4" onended="nextPlay()" />
+    </video>
+	<button id="back_page">뒤로 가아아아아아기</button>
+	<div class="pj_list_box" id="pj_list_box_1">
+		<div id=first style="float: left; height: 33%; width: 100%;">
+			<div id="pr_1" class="hidden_box"> 
+				Wego
+				<div id="pr_1_exp" class="hidden_box">Experience desgin</div>
+			</div>
+		</div>
+		<div style="float: left; height: 33%; width: 100%;">
+			<div id="pr_2" class="hidden_box"> Carnival
+				<div id="pr_2_exp" class="hidden_box">Experience desgin</div>
+			</div>
+		</div>
+		<div style="float: left; height: 33%; width: 100%;">
+			<div id="pr_3" class="hidden_box"> Hogun </div>
+				<div id="pr_3_exp" class="hidden_box">Branding</div>
+		</div>
+		<div style="float: left; height: 33%; width: 100%;">
+			<div id="pr_4" class="hidden_box"> Where you are </div>
+				<div id="pr_4_exp" class="hidden_box">Editorial design</div>
+		</div>
+		<div style="float: left; height: 33%; width: 100%;">
+			<div id="pr_5" class="hidden_box"> Airbnb </div>
+				<div id="pr_5_exp" class="hidden_box">Graphic design</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      window.setTimeout(() => {
+        document.body.classList.remove('fade');
+      });
+    });
+
+var videoPlayer = document.getElementById('myVideo');
+var videoPlayer2 = document.getElementById('Video2');
+var back_button = document.getElementById('back_page');
+        var pr_1_mouseover;
+        var pr_2_mouseover;
+        var pr_3_mouseover;
+        var pr_4_mouseover;
+        var pr_5_mouseover;
+
+        var pr_1_exp_showing;
+        var pr_2_exp_showing;
+        var pr_3_exp_showing;
+        var pr_4_exp_showing;
+        var pr_5_exp_showing;
+        
+        pr_1_mouseover = document.getElementById("pr_1");
+        pr_2_mouseover = document.getElementById("pr_2");
+        pr_3_mouseover = document.getElementById("pr_3");
+        pr_4_mouseover = document.getElementById("pr_4");
+        pr_5_mouseover = document.getElementById("pr_5");
+
+        pr_1_exp_showing = document.getElementById("pr_1_exp");
+        pr_2_exp_showing = document.getElementById("pr_2_exp");
+        pr_3_exp_showing = document.getElementById("pr_3_exp");
+        pr_4_exp_showing = document.getElementById("pr_4_exp");
+        pr_5_exp_showing = document.getElementById("pr_5_exp");
+                        
+
+ 
+        window.onload = function () {
+            
+            pr_1_mouseover.addEventListener("mouseover",pr_1_mouseover_event);
+            pr_2_mouseover.addEventListener("mouseover",pr_2_mouseover_event);
+            pr_3_mouseover.addEventListener("mouseover",pr_3_mouseover_event);
+            pr_4_mouseover.addEventListener("mouseover",pr_4_mouseover_event);
+            pr_5_mouseover.addEventListener("mouseover",pr_5_mouseover_event);
+
+            pr_1_mouseover.addEventListener("mouseout",pr_1_mouseout_event	);
+			pr_2_mouseover.addEventListener("mouseout",pr_2_mouseout_event	);
+            pr_3_mouseover.addEventListener("mouseout",pr_3_mouseout_event	);
+			pr_4_mouseover.addEventListener("mouseout",pr_4_mouseout_event	);
+            pr_5_mouseover.addEventListener("mouseout",pr_5_mouseout_event	);
+
+            back_button = addEventListener("mousedown",back_c);
+
+var video_list = document.getElementById(list);
+  var video = document.getElementById('myVideo');
+     video.addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+      pr_1.className = "btn1";
+      pr_2.className = "btn2";
+      pr_3.className = "btn3";
+      pr_4.className = "btn4";
+      pr_5.className = "btn5";
+    }
+        }
+
+        function back_c() {
+            console.log("click");
+
+      location.href="http://127.0.0.1/video_project/v10.html";
+        }
+
+        function pr_1_mouseover_event(){
+    	console.log("change pr_1");
+    	pr_1_exp.className	= "fade_box_1";
+        videoPlayer2.src = "th_1.mp4";
+        }
+
+        function pr_1_mouseout_event(){
+    	console.log("change pr_1");
+    	pr_1_exp.className	= "hidden_box";
+        videoPlayer2.src = "";
+        }
+
+        function pr_2_mouseover_event(){
+    	console.log("change pr_2");
+    	pr_2_exp.className	= "fade_box_2";
+        videoPlayer2.src = "th_2.mp4";
+        }
+
+         function pr_2_mouseout_event(){
+    	console.log("change pr_2");
+    	pr_2_exp.className	= "hidden_box";
+        videoPlayer2.src = "";
+        }
+
+        function pr_3_mouseover_event(){
+    	console.log("change pr_3");
+    	pr_3_exp.className	= "fade_box_3";
+        videoPlayer2.src = "th_3.mp4";
+        }
+
+         function pr_3_mouseout_event(){
+    	console.log("change pr_3");
+    	pr_3_exp.className	= "hidden_box";
+        videoPlayer2.src = "";
+        }
+
+        function pr_4_mouseover_event(){
+    	console.log("change pr_4");
+    	pr_4_exp.className	= "fade_box_4";
+        videoPlayer2.src = "th_4.mp4";
+        }
+
+         function pr_4_mouseout_event(){
+    	console.log("change pr_4");
+    	pr_4_exp.className	= "hidden_box";
+        videoPlayer2.src = "";
+        }
+
+        function pr_5_mouseover_event(){
+    	console.log("change pr_5");
+    	pr_5_exp.className	= "fade_box_5";
+        videoPlayer2.src = "th_5.mp4";
+        }
+
+         function pr_5_mouseout_event(){
+    	console.log("change pr_5");
+    	pr_5_exp.className	= "hidden_box";
+        videoPlayer2.src = "";
+        }
+
+        
+
+
+        
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  background-color: black;
+}
+
+
+#myVideo {
+            position: fixed; right: 0; bottom: 0;
+            min-width: 100%; height: 100%;
+            z-index: -100;
+            background-size: cover;
+}
+    .v22
+    {
+        position: absolute;
+        width: 100%; height: 100%;
+        z-index: -100;
+    }
+        .v22_hidden
+    {
+        position: absolute;
+        width: 100%; height: 100%;
+        z-index: -100;
+        visibility:hidden ;
+    }
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.passport-text_h {
+  visibility: hidden  ;
+}
+.passport-text_v {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #FFEEBC;
+  text-align: center;
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  visibility: visible  ;
+}
+.map-button_h {
+  visibility: hidden  ;
+}
+.map-button_v {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #FFEEBC;
+  text-align: center;
+  position: absolute;
+  top: 27%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  visibility: visible  ;
+}
+.laptop-button_h {
+  visibility: hidden  ;
+}
+.laptop-button_v {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #FFEEBC;
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible  ;
+}
+.background_button{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  visibility: hidden;
+}
+
+.passport_h_h{
+visibility: hidden;
+}
+
+.passport_h_v{
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  top : 10%;
+  left : 30%;
+  right: 30%;
+}
+
+.map_h_h{
+visibility: hidden;
+}
+
+.map_h_v{
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  top : 10%;
+  left : 10%;
+  right: 10%;
+}
+
+.laptop_h_h{
+visibility: hidden;
+}
+
+.laptop_h_v{
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  top : 10%;
+  left : 30%;
+  right: 30%;
+}
+
+
+.img_1{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.fade-in-box_passport {
+  opacity: 0.5;
+  display: inline-block;
+  background: black;
+  color: white;
+  animation: fadein 4s;
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  visibility: visible  ;
+}
+
+.fade-in-box_laptop {
+  opacity: 0.5;
+  display: inline-block;
+  background: black;
+  color: white;
+  animation: fadein 4s;
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible  ;
+}
+
+.fade-in-box_map {
+  opacity: 0.5;
+  display: inline-block;
+  background: black;
+  color: white;
+  animation: fadein 4s;
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 27%;
+  left: 65%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  visibility: visible  ;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+    
+
+</style>
+
+      <video id="myVideo2" class="v22" autoplay muted>      
+        <source id="list" type="video/mp4" src="case_4.mp4" type="video/mp4" onended="nextPlay()" />
+    </video>
+        <video id="myVideo1" class="v22" autoplay muted>      
+        <source id="list" type="video/mp4" src="case1127.mp4" type="video/mp4" onended="nextPlay()" />
+    </video>
+</head>
+
+
+<body>
+
+  <button class="background_button" id="background_1_button" display="none"></button>
+  <button class="passport-text_h" id="passport-button" display="none">
+    <h2>passport</h2>
+  </button>
+    <button class="map-button_h" id="map-button" display="none">
+    <h2>map</h2>
+  </button>
+    <button class="laptop-button_h" id="laptop-button" display="none">
+    <h2>laptop</h2>
+  </button>
+    <button class="passport_h_h" id="passport_hidden_button_1" display="none"></button>
+    <button class="passport_h_h" id="passport_hidden_button_2" display="none"></button>
+    <button class="passport_h_h" id="passport_hidden_button_3" display="none"></button>
+    <button class="passport_h_h" id="passport_hidden_button_4" display="none"></button>
+
+    <button class="map_h_h" id="map_hidden_button_1" display="none"></button>
+    <button class="map_h_h" id="map_hidden_button_2" display="none"></button>
+    <button class="map_h_h" id="map_hidden_button_3" display="none"></button>
+    <button class="map_h_h" id="map_hidden_button_4" display="none"></button>
+
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>  
+<div>
+    <br><br>    
+</div>
+<script type='text/javascript'>
+
+/*  var video_list = document.getElementById(list);
+  var video = document.getElementById('myVideo');
+     video.addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+      console.log("replay");
+      video.play();
+    } // 재생 끝날 시 인식 */
+</script>
+<script type="text/javascript">
+
+var nextVideo = "case_4.mp4";
+
+var videoPlayer1 = document.getElementById('myVideo1');
+var videoPlayer2 = document.getElementById('myVideo2');
+var passport_button = document.getElementById("passport-button");
+var passport_hb_1 = document.getElementById("passport_hidden_button_1");
+var passport_hb_2 = document.getElementById("passport_hidden_button_2");
+var passport_hb_3 = document.getElementById("passport_hidden_button_3");
+var passport_hb_4 = document.getElementById("passport_hidden_button_4");
+
+var map_button = document.getElementById("map-button");
+var map_hb_1 = document.getElementById("map_hidden_button_1");
+var map_hb_2 = document.getElementById("map_hidden_button_2");
+var map_hb_3 = document.getElementById("map_hidden_button_3");
+var map_hb_4 = document.getElementById("map_hidden_button_4");
+
+var laptop_button = document.getElementById("laptop-button");
+var laptop_hb_1 = document.getElementById("laptop_hidden_button_1");
+var laptop_hb_2 = document.getElementById("laptop_hidden_button_2");
+var laptop_hb_3 = document.getElementById("laptop_hidden_button_3");
+var laptop_hb_4 = document.getElementById("laptop_hidden_button_4");
+
+
+var video_list = document.getElementById(list);
+  var video = document.getElementById('myVideo1');
+     video.addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+
+      videoPlayer1.className="v22_hidden";
+            passport_button.className = "fade-in-box_passport" ;
+      map_button.className="fade-in-box_map";
+      laptop_button.className="fade-in-box_laptop";
+    
+      console.log("replay");
+    
+    videoPlayer1.src = "";
+    video.removeEventListener('ended',myHandler,false)
+
+    }
+
+
+
+/* passport button */
+    passport_button.onclick = function () {
+      console.log(videoPlayer1.src);
+      console.log("passport button_click");
+      passport_button.className = "passport-text_h";
+      map_button.className="map-button_h";
+      laptop_button.className="laptop-button_h";
+      passport_hb_1.className="passport_h_v";
+      videoPlayer1.className="v22";
+      videoPlayer1.src = "passport_opening.mp4";
+
+        passport_hb_1.onclick = function() {
+        console.log(videoPlayer1.src);
+        console.log("passport2 button_click");
+          passport_hb_1.className="passport_h_h";
+          passport_hb_2.className="passport_h_v";
+          videoPlayer1.src = "passport_fliping.mp4";
+
+        passport_hb_2.onclick = function() {
+        console.log(videoPlayer1.src);
+        console.log("passport2 button_click");
+          passport_hb_2.className="passport_h_h";
+          videoPlayer1.src = "passport_closing.mp4";
+
+    video.addEventListener('ended',myHandler3,false);
+    function myHandler3(e) {
+      $("#myVideo1").fadeOut(100);
+
+      videoPlayer1.className="v22_hidden";
+      passport_button.className = "fade-in-box_passport" ;
+      map_button.className="fade-in-box_map";
+      laptop_button.className="fade-in-box_laptop";
+    
+      console.log("passport video cut");
+    videoPlayer1.src = "";
+    $("#myVideo1").fadeIn(10);
+    video.removeEventListener('ended',myHandler3,false)
+
+    }
+
+
+
+           }
+        }
+    }
+/* map button */
+    map_button.onclick = function () {
+          console.log(videoPlayer1.src);
+      console.log("map_button_click");
+      passport_button.className = "passport-text_h";
+      map_button.className="map-button_h";
+      laptop_button.className="laptop-button_h";
+      videoPlayer1.className="v22";
+      videoPlayer1.src =  "map_opening.mp4";
+      map_hb_1.className="map_h_v";
+
+          map_hb_1.onclick = function() {
+            console.log(videoPlayer1.src);
+            console.log("map2 button_click");
+            map_hb_1.className="map_h_h";
+            videoPlayer1.src = "map_closing.mp4";
+            video.addEventListener('ended',myHandler4,false);
+          function myHandler4(e) {
+
+            videoPlayer1.src = "";
+            videoPlayer1.className="v22_hidden";
+            passport_button.className = "fade-in-box_passport" ;
+            map_button.className="fade-in-box_map";
+            laptop_button.className="fade-in-box_laptop";
+    
+            console.log("map video cut");
+    
+
+    video.removeEventListener('ended',myHandler4,false)
+
+    }
+}
+
+
+    }
+
+/* laptop button */
+    laptop_button.onclick = function () {
+          console.log(videoPlayer1.src);
+      console.log("laptop button_click");
+      passport_button.className = "passport-text_h";
+      map_button.className="map-button_h";
+      laptop_button.className="laptop-button_h";
+      /* videoPlayer.src = "laptop_1.mp4"; */
+
+        setTimeout(move_page, 10); //2초후에 move_page함수실행
+
+        function page(){
+      console.log("fuckyou");
+       }
+
+
+
+
+      function move_page(){
+      location.href="http://127.0.0.1/video_project/portfolio_page7.html"  // 페이지 이동
+      }
+
+
+
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

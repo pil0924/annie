@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<style type="text/css">
+	body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  background-color: black;
+}
+	.v22
+    {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+    }
+    .pin_image_gangwon {
+    position: fixed;
+    top: 37%;
+    left: 73%;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/pin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fadein 4s;
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+}
+    .img_rnd_gangwon_v {
+    	position: fixed;
+    top : 15%;
+    left: 35%;
+    width: 568px;
+    display: flex;
+    height: 584px;
+    background-image: url("./img/square.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+    .img_main_gangwon_v {
+    position: fixed;
+    top: 19%;
+    width: 500px;
+    height: 500px;
+    background-image: url("./img/gangwon_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    clear: both;	
+    display: flex;
+    align-items: center;
+ 	z-index: 7;
+}
+
+ .img_back{
+ 	position: fixed;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: rgba(0, 0, 0, 0);
+ 	z-index: 3;
+ }
+
+  .chg_left_gangwon{
+  	position: relative;
+    background-image: url("./img/chg_left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 70px;
+ 	height: 70px;
+ 	float: left;
+ 	z-index: 10;
+  }
+  .chg_center_gangwon{
+  	position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 360px;
+ 	height: 70px;
+ 	float: right;
+  }
+
+  .chg_right_gangwon{
+  	position: relative;
+    background-image: url("./img/chg_right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 70px;
+ 	height: 70px;
+ 	float: right;
+ 	z-index: 10;
+  }
+  .pin_text_gangwon{
+  	position: fixed;
+  	font-size: 20px;
+  	left: 70%;
+  	top: 35%;
+  }
+  .h_class{
+  	visibility: hidden;
+  }
+
+    .pin_image_vietnam {
+    position: fixed;
+    top: 52%;
+    left: 69%;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/pin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fadein 4s;
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+}
+    .img_rnd_vietnam_v {
+    	position: fixed;
+    top : 15%;
+    left: 35%;
+    width: 568px;
+    display: flex;
+    height: 584px;
+    background-image: url("./img/square.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+    .img_main_vietnam_v {
+    position: fixed;
+    top: 19%;
+    width: 500px;
+    height: 500px;
+    background-image: url("./img/vietnam_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    clear: both;	
+    display: flex;
+    align-items: center;
+ 	z-index: 7;
+}
+
+ .img_back{
+ 	position: fixed;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: rgba(0, 0, 0, 0);
+ 	z-index: 3;
+ }
+
+  .chg_left_vietnam{
+  	position: relative;
+    background-image: url("./img/chg_left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 70px;
+ 	height: 70px;
+ 	float: left;
+ 	z-index: 10;
+  }
+  .chg_center_vietnam{
+  	position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 360px;
+ 	height: 70px;
+ 	float: right;
+  }
+
+  .chg_right_vietnam{
+  	position: relative;
+    background-image: url("./img/chg_right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 70px;
+ 	height: 70px;
+ 	float: right;
+ 	z-index: 10;
+  }
+  .pin_text_vietnam{
+  	position: fixed;
+    top: 50%;
+    left: 69%;
+  	font-size: 20px;
+}
+
+    .pin_image_newyork {
+    position: fixed;
+    top: 34%;
+    left: 28%;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/pin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fadein 4s;
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+}
+    .img_rnd_newyork_v {
+    	position: fixed;
+    top : 15%;
+    left: 35%;
+    width: 568px;
+    display: flex;
+    height: 584px;
+    background-image: url("./img/square.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+    .img_main_newyork_v {
+    position: fixed;
+    top: 19%;
+    width: 500px;
+    height: 500px;
+    background-image: url("./img/newyork_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    clear: both;	
+    display: flex;
+    align-items: center;
+ 	z-index: 7;
+}
+
+ .img_back{
+ 	position: fixed;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: rgba(0, 0, 0, 0);
+ 	z-index: 3;
+ }
+
+  .chg_left_newyork{
+  	position: relative;
+    background-image: url("./img/chg_left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 70px;
+ 	height: 70px;
+ 	float: left;
+ 	z-index: 10;
+  }
+  .chg_center_newyork{
+  	position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 360px;
+ 	height: 70px;
+ 	float: right;
+  }
+
+  .chg_right_newyork{
+  	position: relative;
+    background-image: url("./img/chg_right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+ 	width: 70px;
+ 	height: 70px;
+ 	float: right;
+ 	z-index: 10;
+  }
+  .pin_text_newyork{
+  	position: fixed;
+    top: 32%;
+    left: 28%;
+  	font-size: 20px;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.background_button{
+	position: absolute;
+	top: 0%;
+	background-color: white;
+	z-index: 100;
+}
+
+.back_button{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+
+
+
+
+</style>
+<body>
+<video id="myVideo1" class="v22" autoplay muted>      
+    <source id="list" type="video/mp4" src="map_opening.mp4" type="video/mp4" onended="nextPlay()" />
+</video>
+<div id="pin_gangwon">
+	<div id="pin_gangwon" class="pin_image_gangwon"></div>
+	<div id="pin_gangwon_text" class="h_class">gangwon,Korea</div>
+</div>
+
+<div id="img_background" class="h_class">
+	<div id="img_rnd" class="h_class">
+		<div id="img_main" class="h_class">
+			<div id="img_chg_left_gangwon" class="h_class"></div>
+			<div id="img_chg_center_gangwon" class="h_class"></div>
+			<div id="img_chg_right_gangwon" class="h_class"></div>
+		</div>
+	</div>
+</div>
+
+
+<div id="pin_vietnam">
+	<div id="pin_vietnam" class="pin_image_vietnam"></div>
+	<div id="pin_vietnam_text" class="h_class">vietnam</div>
+</div>
+
+<div id="img_background" class="h_class">
+	<div id="img_rnd" class="h_class">
+		<div id="img_main" class="h_class">
+			<div id="img_chg_left_vietnam" class="h_class"></div>
+			<div id="img_chg_center_vietnam" class="h_class"></div>
+			<div id="img_chg_right_vietnam" class="h_class"></div>
+		</div>
+	</div>
+</div>
+
+<div id="pin_newyork">
+	<div id="pin_newyork" class="pin_image_newyork"></div>
+	<div id="pin_newyork_text" class="h_class">newyork</div>
+</div>
+
+<div id="img_background" class="h_class">
+	<div id="img_rnd" class="h_class">
+		<div id="img_main" class="h_class">
+			<div id="img_chg_left_newyork" class="h_class"></div>
+			<div id="img_chg_center_newyork" class="h_class"></div>
+			<div id="img_chg_right_newyork" class="h_class"></div>
+		</div>
+	</div>
+</div>
+
+<button id="back" class="back_button">Back</div>
+
+<script type="text/javascript">
+	var back_b = document.getElementById('back');
+
+	back_b.addEventListener("mousedown",back_c)
+
+
+	 function back_c() {
+            console.log("click");
+
+
+      location.href="http://127.0.0.1/video_project/v13_3.html";
+        }
+	var pin_gangwon = document.getElementById('pin_gangwon');
+	var img_bk = document.getElementById('img_background');
+	var img_rd = document.getElementById('img_rnd');
+	var img_main = document.getElementById('img_main');
+	var pin_gangwon_text = document.getElementById('pin_gangwon_text');
+	var img_chg_left_gangwon = document.getElementById('img_chg_left_gangwon');
+	var img_chg_center_gangwon = document.getElementById('img_chg_center_gangwon');
+	var img_chg_right_gangwon = document.getElementById('img_chg_right_gangwon');
+
+	pin_gangwon.addEventListener("mouseover",pin_gangwon_mouseover);
+	pin_gangwon.addEventListener("mouseout",pin_gangwon_mouseout);
+	pin_gangwon.addEventListener("mousedown",pin_gangwon_mousedown);
+
+        function pin_gangwon_mouseover(){
+        $("#pin_gangwon_text").stop(true, true);
+    	console.log("show gangwon text");
+    	pin_gangwon_text.className	= "pin_text_gangwon";
+        $("#pin_gangwon_text").fadeIn(1000);
+        }
+
+        function pin_gangwon_mouseout(){
+    	pin_gangwon_text.className	= "h_class";
+        $("#pin_gangwon_text").fadeOut(10);
+        }
+
+        function pin_gangwon_mousedown(){
+        	console.log("gangwon mousedown");
+        	img_bk.className = "img_back";
+        	img_rd.className = "img_rnd_gangwon_v";
+        	img_main.className = "img_main_gangwon_v";
+			img_chg_left_gangwon.className = "chg_left_gangwon";
+			img_chg_center_gangwon.className = "chg_center_gangwon";
+			img_chg_right_gangwon.className = "chg_right_gangwon";
+
+			img_bk.addEventListener("mousedown",h_class_tr);
+			img_chg_right_gangwon.addEventListener("mousedown",log);
+        }
+
+
+
+
+			function log(){
+				console.log("shit");
+			}
+
+			function h_class_tr(){
+
+        	img_bk.className = "h_class";
+        	img_rd.className = "h_class";
+        	img_main.className = "h_class";
+			img_chg_left_gangwon.className = "h_class";
+			img_chg_center_gangwon.className = "h_class";
+			img_chg_right_gangwon.className = "h_class";
+
+			}
+
+	var pin_vietnam = document.getElementById('pin_vietnam');
+	var img_bk = document.getElementById('img_background');
+	var img_rd = document.getElementById('img_rnd');
+	var img_main = document.getElementById('img_main');
+	var pin_vietnam_text = document.getElementById('pin_vietnam_text');
+	var img_chg_left_vietnam = document.getElementById('img_chg_left_vietnam');
+	var img_chg_center_vietnam = document.getElementById('img_chg_center_vietnam');
+	var img_chg_right_vietnam = document.getElementById('img_chg_right_vietnam');
+
+	pin_vietnam.addEventListener("mouseover",pin_vietnam_mouseover);
+	pin_vietnam.addEventListener("mouseout",pin_vietnam_mouseout);
+	pin_vietnam.addEventListener("mousedown",pin_vietnam_mousedown);
+
+        function pin_vietnam_mouseover(){
+        $("#pin_vietnam_text").stop(true, true);
+    	console.log("show vietnam text");
+    	pin_vietnam_text.className	= "pin_text_vietnam";
+        $("#pin_vietnam_text").fadeIn(1000);
+        }
+
+        function pin_vietnam_mouseout(){
+    	pin_vietnam_text.className	= "h_class";
+        $("#pin_vietnam_text").fadeOut(10);
+        }
+
+        function pin_vietnam_mousedown(){
+        	console.log("vietnam mousedown");
+        	img_bk.className = "img_back";
+        	img_rd.className = "img_rnd_vietnam_v";
+        	img_main.className = "img_main_vietnam_v";
+			img_chg_left_vietnam.className = "chg_left_vietnam";
+			img_chg_center_vietnam.className = "chg_center_vietnam";
+			img_chg_right_vietnam.className = "chg_right_vietnam";
+
+			img_bk.addEventListener("mousedown",h_class_tr);
+			img_chg_right_vietnam.addEventListener("mousedown",log);
+        }
+
+        	var pin_newyork = document.getElementById('pin_newyork');
+	var img_bk = document.getElementById('img_background');
+	var img_rd = document.getElementById('img_rnd');
+	var img_main = document.getElementById('img_main');
+	var pin_newyork_text = document.getElementById('pin_newyork_text');
+	var img_chg_left_newyork = document.getElementById('img_chg_left_newyork');
+	var img_chg_center_newyork = document.getElementById('img_chg_center_newyork');
+	var img_chg_right_newyork = document.getElementById('img_chg_right_newyork');
+
+	pin_newyork.addEventListener("mouseover",pin_newyork_mouseover);
+	pin_newyork.addEventListener("mouseout",pin_newyork_mouseout);
+	pin_newyork.addEventListener("mousedown",pin_newyork_mousedown);
+
+        function pin_newyork_mouseover(){
+        $("#pin_newyork_text").stop(true, true);
+    	console.log("show newyork text");
+    	pin_newyork_text.className	= "pin_text_newyork";
+        $("#pin_newyork_text").fadeIn(1000);
+        }
+
+        function pin_newyork_mouseout(){
+    	pin_newyork_text.className	= "h_class";
+        $("#pin_newyork_text").fadeOut(10);
+        }
+
+        function pin_newyork_mousedown(){
+        	console.log("newyork mousedown");
+        	img_bk.className = "img_back";
+        	img_rd.className = "img_rnd_newyork_v";
+        	img_main.className = "img_main_newyork_v";
+			img_chg_left_newyork.className = "chg_left_newyork";
+			img_chg_center_newyork.className = "chg_center_newyork";
+			img_chg_right_newyork.className = "chg_right_newyork";
+
+			img_bk.addEventListener("mousedown",h_class_tr);
+			img_chg_right_newyork.addEventListener("mousedown",log);
+        }
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

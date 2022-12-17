@@ -436,36 +436,14 @@ var laptop_hb_4 = document.getElementById("laptop_hidden_button_4");
 
     home_button.addEventListener("mousedown",log);
     abt_button.addEventListener("mousedown",log);
-    tvl_button.addEventListener("mousedown",tvl);
-    wk_button.addEventListener("mousedown",wk);
+    tvl_button.addEventListener("mousedown",log);
+    wk_button.addEventListener("mousedown",log);
 
 
 
       function log(){
         console.log("WHY");
       }
-
-
-    function wk() {
-      console.log(videoPlayer1.src);
-      console.log("laptop button_click");
-      passport_button.className = "passport-text_h";
-      map_button.className="map-button_h";
-      laptop_button.className="laptop-button_h";
-      /* videoPlayer.src = "laptop_1.mp4"; */
-        setTimeout(move_page, 10); //2초후에 move_page함수실행
-      function move_page(){
-      location.href="https://pil0924.github.io/annie/portfolio_page7.html"}
-    }
-
-    function tvl(){
-      move_page_map();
-      function move_page_map(){
-      location.href="https://pil0924.github.io/annie/map_2.html" 
-    }
-    }
-
-
 
 
 var video_list = document.getElementById(list);
